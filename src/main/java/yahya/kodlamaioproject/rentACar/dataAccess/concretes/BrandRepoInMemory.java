@@ -15,7 +15,7 @@ public class BrandRepoInMemory implements BrandRepository {
         brands = new ArrayList<Brand>();
         brands.add(new Brand(1,"bmw"));
         brands.add(new Brand(2,"audi"));
-        brands.add(new Brand(3,"sdsdsdsd"));
+        brands.add(new Brand(3,"fiat"));
     }
     @Override
     public List<Brand> getAll() {
