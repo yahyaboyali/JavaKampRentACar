@@ -1,10 +1,7 @@
 package yahya.kodlamaioproject.rentACar.wepApi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import yahya.kodlamaioproject.rentACar.bussiness.abstracts.BrandService;
 import yahya.kodlamaioproject.rentACar.bussiness.requests.CreateBrandRequest;
 import yahya.kodlamaioproject.rentACar.bussiness.responses.GetAllBrandREsponse;
@@ -28,7 +25,7 @@ public class BrandsController {
     }
 
     @PostMapping("/add")
-    public void add(CreateBrandRequest createBrandRequest) {
+    public void add(@RequestBody CreateBrandRequest createBrandRequest) {
         this.brandService.add(createBrandRequest);
     }
 }

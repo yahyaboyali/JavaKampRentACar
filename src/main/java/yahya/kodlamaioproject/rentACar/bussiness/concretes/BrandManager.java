@@ -25,7 +25,12 @@ public class BrandManager implements BrandService {
     public List<GetAllBrandREsponse> getAll() {
         List<Brand> result = brandRepository.findAll();
         List<GetAllBrandREsponse> brandREsponses = new ArrayList<>();
-
+        for (Brand resultBrand: result) {
+            GetAllBrandREsponse getAllBrandREsponse = new GetAllBrandREsponse();
+            getAllBrandREsponse.setName(resultBrand.getName());
+            getAllBrandREsponse.setId(resultBrand.getId());
+            brandREsponses.add(getAllBrandREsponse);
+        }
         return brandREsponses;
     }
 
