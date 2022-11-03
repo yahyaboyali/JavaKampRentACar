@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
-public class BrandRepoInMemory implements BrandRepository {
+public class BrandRepoInMemory  {
     List<Brand> brands;
 
     public BrandRepoInMemory() {
@@ -17,7 +17,7 @@ public class BrandRepoInMemory implements BrandRepository {
         brands.add(new Brand(2,"audi"));
         brands.add(new Brand(3,"fiat"));
     }
-    @Override
+
     public List<Brand> getAll() {
         return brands;
     }
